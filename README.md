@@ -19,4 +19,10 @@ $ sudo usermod -aG docker pi
 Following the `usermod` command, you will need to logout and back in with the pi user, in order to run `docker` commands without
 needing to supply `sudo`.
 
+## Usage
+
+### rtl_tcp as background daemon
+```shell
+docker run -d -p 1234:1234 --privileged -v /dev/bus/usb:/dev/bus/usb --name rtl_tcp johncharrell/raspbian-rtlsdr rtl_tcp -a 0.0.0.0
+```
 
