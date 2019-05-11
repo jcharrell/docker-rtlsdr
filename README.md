@@ -23,12 +23,12 @@ needing to supply `sudo`.
 
 ### rtl_tcp as background daemon
 ```shell
-docker run -d -p 1234:1234 --privileged -v /dev/bus/usb:/dev/bus/usb --name rtl_tcp johncharrell/raspbian-rtlsdr rtl_tcp -a 0.0.0.0
+docker run -d -p 1234:1234 --device=/dev/bus/usb --name rtl_tcp johncharrell/raspbian-rtlsdr rtl_tcp -a 0.0.0.0
 ```
 
 ### rtl_tcp interactively
 ```shell
-docker run -id -p 1234:1234 --privileged -v /dev/bus/usb:/dev/bus/usb --name rtl_tcp johncharrell/raspbian-rtlsdr rtl_tcp -a 0.0.0.0
+docker run -id -p 1234:1234 --device=/dev/bus/usb --name rtl_tcp johncharrell/raspbian-rtlsdr rtl_tcp -a 0.0.0.0
 ```
 
 
